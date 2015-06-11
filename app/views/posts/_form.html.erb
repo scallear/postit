@@ -1,5 +1,5 @@
-<div class='well'>
-  <% if @post.errors.any? %>
+<% if @post.errors.any? %>
+  <div class='well'>
     <h4>There were some errors:</h4>
     <ul>
       <% @post.errors.full_messages.each do |error| %>  
@@ -8,8 +8,8 @@
         </li>
       <% end%>
     </ul>
-  <% end %>
-</div>
+  </div>
+<% end %>
 
 <%= form_for @post do |f| %>
   <%= f.label :title %>
